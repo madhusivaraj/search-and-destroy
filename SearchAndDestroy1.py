@@ -57,20 +57,21 @@ def pick_newGuess(pmap):
 def sum_probs(pmap):
     d = len(pmap)
     totsum = 0
-    for i in range(50):
+    for i in range(d):
         totsum = totsum + sum(pmap[i])
     print('Total sum of probabilities is',totsum,'.')
 
 ##################################################################
 
 # Initialize
-d = 50
+d = 10
 tmap = terrain_p_map(d)
 pmap = initial_pmap(d)
 newGuess = [random.randint(0, d-1),random.randint(0, d-1)]
 hasTarget = 0
 targetLocation = [random.randint(0, d-1),random.randint(0, d-1)]
 count = 0
+print("Initial Map", pmap)
 
 # Loop
 while hasTarget == 0:
