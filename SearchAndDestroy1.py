@@ -1,8 +1,8 @@
 import random
 
-def terrain_p_map(d): # This function generates the environment from a dimension (d) and number of mines (n).
+def terrain_p_map(d):
     map = []
-    for i in range(d): # loops make a dXd map full of 0's
+    for i in range(d):
         map.append([])
         for j in range(d):
             r = random.random()
