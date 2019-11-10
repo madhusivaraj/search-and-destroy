@@ -89,7 +89,7 @@ def SearchAndDestroy(d, decisionRule, movingAgent, movingTarget):
     while True:
         count += 1
         if newGuess == targetLocation: # if the target is in the queried cell
-            if random.random() > pmap[newGuess[0]][newGuess[1]]: # if you don't get a false negative
+            if random.random() > tmap[newGuess[0]][newGuess[1]]: # if you don't get a false negative
                 print('Target found at',newGuess,'after',count,'queries.')
                 sum_probs(pmap)
                 break
